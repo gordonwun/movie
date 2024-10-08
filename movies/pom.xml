@@ -8,11 +8,11 @@
 		<version>3.3.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>dev.test</groupId>
+	<groupId>first-springboot</groupId>
 	<artifactId>movies</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>movies</name>
-	<description>spring boot  mongodb </description>
+	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
