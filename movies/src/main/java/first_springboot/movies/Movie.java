@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Movie {
     @Id
-    private ObjectId Id;
+    private ObjectId id;
     private String imdbId;
     private String title;
     private String releaseDate;

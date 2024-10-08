@@ -14,6 +14,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Review {
     @Id
-    private ObjectId Id;
+    private ObjectId id;
     private String body;
 }
