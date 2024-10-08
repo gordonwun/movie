@@ -22,9 +22,13 @@ public class MovieController {
     public ResponseEntity<List<Movie>> getAllMovies(){
         return new ResponseEntity<List<Movie>>(movieService.allMovies(), HttpStatus.OK);
     }
-    @GetMapping("/{Id}")
-    public ResponseEntity<Optional<Movie>> getMovie(@PathVariable ObjectId Id){
-        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(Id), HttpStatus.OK);
+    @GetMapping("/ObjectId/{id}")
+    public ResponseEntity<Optional<Movie>> getMovie(@PathVariable ObjectId id){
+        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(id), HttpStatus.OK);
+    }
+    @GetMapping("/Imdbid/{imdbid}")
+    public ResponseEntity<Optional<Movie>> getMovieByImdbId(@PathVariable String imdbid){
+        return new ResponseEntity<Optional<Movie>>(movieService.findMoiveByImdbId(imdbid), HttpStatus.OK);
     }
 
 }
