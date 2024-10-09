@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import api from './api/axiosConfig'
 import { Layout } from './Components/Layout'
 import { Routes, Route } from 'react-router-dom'
 import Home from './Components/home/Home'
+import Header from './Components/header/Header'
+import Trailer from './Components/trailer/Trailer'
 
 function App() {
 
@@ -33,11 +33,11 @@ function App() {
   return (
     <>
     <div className='App'>
-
+      <Header />
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route path='/' element={<Home movies={movies}/>}/>
-
+          <Route path='/Trailer/:ytTrailerId' element={<Trailer/>}/>
         </Route>
       </Routes>
 
