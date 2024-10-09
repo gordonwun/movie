@@ -3,7 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import api from './api/axiosConfig'
-
+import { Layout } from './Components/Layout'
+import { Routes, Route } from 'react-router-dom'
+import Home from './Components/home/Home'
 
 function App() {
 
@@ -32,6 +34,12 @@ function App() {
     <>
     <div className='App'>
 
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+          <Route path='/' element={<Home movies={movies}/>}/>
+
+        </Route>
+      </Routes>
 
     </div>
     </>
